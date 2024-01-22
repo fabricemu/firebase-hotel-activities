@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>login and Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f0f0; 
+      
+    }
+
+  
+
+    .content-container {
+      background-color: darkgray;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 20px;
+      width: 30%;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: block;
+      margin-top: 5px;
+    }
+
+    input, textarea {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 80%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    #button{
+      border-radius:"font-size: 16px";
+      padding: 10px 20px;
+      font-size: 5px;
+    }
+    
+  </style>
+</head>
+
+<div class="form -container">
+  <h1> LOGIN </h1>
+  <hr>
+      </head>
+   <form onSubmit="event.preventDefault()">
+  <label for="first name">firstname </label><br>
+  <input type="text" placeholder="First name.." name="firstname" id="firstname" value=""><br>
+
+  <label for="second name">Second name</label><br>
+  <input type="text" placeholder="Second name.." name="secondname" id="secondname" value=""><br>
+
+  <label for="Email">Email</label><br>
+  <input type="email" placeholder="Your Email.." name="email" id="email" value=""><br>
+
+  <label for="password">password</label><br>
+  <input type="password" placeholder="password.." name="password" id="password" value=""><br>
+
+<div>
+  <button style="font-size: 40px; background-color: darkmagenta;" onClick="onSignup()">Register</button>
+</div>
+ 
+</div>
+</form>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="firebase.js"></script>
+<script src="auth.js"></script>
+
+</body>
+</html>
+
+
