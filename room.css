@@ -1,0 +1,44 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .form-container {
+    text-align: center;
+  }
+
+  form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, select,.add_room{
+
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  .add_room{
+   background-color: darkmagenta;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    ,
+  }

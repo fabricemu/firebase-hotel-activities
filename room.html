@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rooms</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    
+  <link href="room.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Rooms</h1>
+    <hr>
+  
+    <form>
+      <label for="roomTitle">Room Title:</label>
+      <input type="text" id="roomTitle" name="roomTitle" placeholder="Enter room title.." required>
+
+      <label for="roomNumber">Room Number:</label>
+      <input type="text" id="roomNumber" name="roomNumber" placeholder="Enter room number.." required>
+      <label for="room_type">Room type:</label>
+      <select name="room_type" id="room_type">
+        <option value="normal">Normal</option>
+        <option value="Vip">VIP</option>
+        <option value="Presidential">Presidential</option>
+    </select>
+
+
+      <label for="roomSize">Bedroom Size:</label>
+      <input type="text" id="roomSize" name="roomSize" placeholder="Enter room size.." required>
+
+      <button id="addroom" class="add_room">Add room</button>
+
+    </form>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+  <script src="room.js"></script>
+  
+
+
+</body>
+</html>
+ 
