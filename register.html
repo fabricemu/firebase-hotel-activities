@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>login and Register</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-   
-  <link href="css/style.css" rel="stylesheet">
+    <title>login and Register</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <div class="form -container">
-  <h1> create new account</h1>
-  <hr>
-      </head>
-   <form onSubmit="event.preventDefault()">
-  <label for="first name">firstname </label><br>
-  <input type="text" placeholder="First name.." name="firstname" id="firstname" value=""><br>
+    <h1> create new account</h1>
+    <hr>
+    <form id="registerForm">
+        <label for="firstname">firstname </label><br>
+        <input id="firstname" name="firstname" placeholder="First name.." type="text" value=""><br>
 
-  <label for="second name">Second name</label><br>
-  <input type="text" placeholder="Second name.." name="secondname" id="secondname" value=""><br>
+        <label for="secondname">Second name</label><br>
+        <input id="secondname" name="secondname" placeholder="Second name.." type="text" value=""><br>
 
-  <label for="phoneNumber">Phone Number:</label>
-  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-456-7890">
- 
-  <label for="Email">Email</label><br>
-  <input type="email" placeholder="Your Email.." name="email" id="email" value=""><br>
+        <label for="phoneNumber">Phone Number:</label>
+        <input id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" type="tel">
 
-  <label for="password">password</label><br>
-  <input type="password" placeholder="password.." name="password" id="password" value=""><br>
-<a href="login.html">arleady have account</a>
-<div>
-  <button style="font-size: 40px; background-color: darkmagenta;" onClick="onSignup()">Register</button>
+        <label for="Email">Email</label><br>
+        <input id="email" name="email" placeholder="Your Email.." type="email" value=""><br>
+
+        <label for="password">password</label><br>
+        <input id="password" name="password" placeholder="password.." type="password" value=""><br>
+        <a href="login.html">arleady have account</a>
+        <div>
+            <button id="submitBtn" type="submit">Register</button>
+        </div>
+    </form>
 </div>
- 
-</div>
-</form>
+
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
