@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#loginBtn {
+    width: 50%;
+    padding: 8px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background: #15102f;
+    font-size: 16px;
+    color: #F4F4F4;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.content-container {
+    background-color: darkgray;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+
+textarea {
+    resize: none;
+}
+
+#button {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+/* Add spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #f9f9f9;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    color: #f9f9f9;
+}
+
+.spinner.hidden {
+    display: none;
+}

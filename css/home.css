@@ -1,0 +1,42 @@
+body{
+   margin:0 ;
+   padding: 0;
+   background-color: #F4F4F4;
+}
+.container{
+    max-width: 600px;
+    margin:0 auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(black,black,black, 0.1);
+
+}
+h1{
+    text-align: center;
+
+}
+hr{
+    border: 3px solid #ccc;
+    margin-bottom: 20px;
+}
+.room {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.room-title {
+    font-weight: bold;
+}
+
+.room-type {
+    font-style: italic;
+}
+
+.room-price {
+    font-size: 14px;
+    color: #888;
+}
