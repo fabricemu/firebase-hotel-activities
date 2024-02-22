@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Room Reservations - Admin</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/home.css" rel="stylesheet">
     <link href="css/admin.css" rel="stylesheet">
 
@@ -13,54 +13,71 @@
 <div class="container">
     <h1>Admin Panel - Manage Rooms</h1>
     <hr>
-
+    <button id="addNewRoomBtn">Add New Room</button>
     <!-- Table to display rooms -->
     <h2>Rooms</h2>
     <table id="roomsTable">
         <thead>
-            <tr>
-                <th>Room Title</th>
-                <th>Number</th>
-                <th>Price</th>
-                <th>Size</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Room Title</th>
+            <th>Number</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody id="roomsTableBody">
-            <!-- Room data will be inserted here dynamically -->
+        <!-- Room data will be inserted here dynamically -->
         </tbody>
     </table>
 
     <!-- Add Room Modal -->
-    <div id="addRoomModal" class="modal">
+    <!-- Add Room Modal -->
+    <div class="modal" id="addRoomModal">
         <div class="modal-content">
             <span class="close" onclick="hideModal('addRoomModal')">&times;</span>
             <h2>Add New Room</h2>
             <form id="addRoomForm">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" required></textarea>
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" required>
+                <label for="roomTitle">Room Title:</label>
+                <input id="roomTitle" name="roomTitle" required type="text">
+
+                <label for="roomNumber">Room Number:</label>
+                <input id="roomNumber" name="roomNumber" required type="text">
+
+                <label for="roomSize">Room Size:</label>
+                <select id="roomSize" name="roomSize">
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Suite">Suite</option>
+                </select>
+
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="roomType">
+                    <option value="Standard">Standard</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Executive">Executive</option>
+                </select>
+
+                <!-- Add more fields as needed -->
+
                 <button type="submit">Add Room</button>
             </form>
         </div>
     </div>
 
     <!-- Update Room Modal -->
-    <div id="updateRoomModal" class="modal">
+    <div class="modal" id="updateRoomModal">
         <div class="modal-content">
             <span class="close" onclick="hideModal('updateRoomModal')">&times;</span>
             <h2>Update Room</h2>
             <form id="updateRoomForm">
-                <input type="hidden" id="roomIdToUpdate" name="roomIdToUpdate">
+                <input id="roomIdToUpdate" name="roomIdToUpdate" type="hidden">
                 <label for="updatedTitle">Title:</label>
-                <input type="text" id="updatedTitle" name="updatedTitle">
+                <input id="updatedTitle" name="updatedTitle" type="text">
                 <label for="updatedDescription">Description:</label>
                 <textarea id="updatedDescription" name="updatedDescription"></textarea>
                 <label for="updatedPrice">Price:</label>
-                <input type="number" id="updatedPrice" name="updatedPrice">
+                <input id="updatedPrice" name="updatedPrice" type="number">
                 <button type="submit">Update Room</button>
             </form>
         </div>

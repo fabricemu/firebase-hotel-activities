@@ -108,45 +108,26 @@ const deleteRoom = (roomId) => {
 document.getElementById('addRoomForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const roomData = {
-        roomTitle: e.target.elements.title.value,
-        roomNumber: e.target.elements.roomNumber.value,
-        roomSize: e.target.elements.roomSize.value,
-        room_type: e.target.elements.roomType.value // Assuming you have a select element with id 'roomType'
+        roomTitle: document.getElementById('roomTitle').value,
+        roomNumber: document.getElementById('roomNumber').value,
+        roomSize: document.getElementById('roomSize').value,
+        room_type: document.getElementById('roomType').value
+        // Add more fields as needed
     };
     addRoom(roomData);
 });
-// Event listener for 'Edit' buttons
+document.getElementById('addNewRoomBtn').addEventListener('click', () => {
+    showModal('addRoomModal');
+});
 // Event listener for 'Edit' buttons
 document.getElementById('roomsTable').addEventListener('click', (e) => {
     if (e.target.classList.contains('edit-btn')) {
         const roomId = e.target.dataset.roomId;
-
-        // Fetch the existing room data from Firestore
-        db.collection("Rooms").doc(roomId).get()
-            .then((doc) => {
-                if (doc.exists) {
-                    const roomData = doc.data();
-
-                    // Populate the update form with existing room data
-                    document.getElementById('updatedTitle').value = roomData.roomTitle;
-                    // document.getElementById('updatedRoomNumber').value = roomData.roomNumber;
-                    document.getElementById('updatedRoomSize').value = roomData.roomSize;
-                    document.getElementById('updatedRoomType').value = roomData.room_type;
-
-                    // Show the update modal
-                    showModal('updateRoomModal');
-                } else {
-                    console.log("No such document!");
-                    alert("Room data not found.");
-                }
-            })
-            .catch((error) => {
-                console.error("Error getting room data:", error);
-                alert("Failed to fetch room data. Please check the console for details.");
-            });
+        // Populate the update form with existing room data (optional)
+        // For now, just show the modal for updating the room
+        showModal('updateRoomModal');
     }
 });
-
 
 // Event listener for 'Delete' buttons
 document.getElementById('roomsTable').addEventListener('click', (e) => {

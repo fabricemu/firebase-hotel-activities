@@ -4,6 +4,18 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input, select,.add_room{
+
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
 
 
 #roomsTable {
