@@ -120,14 +120,37 @@ document.getElementById('addNewRoomBtn').addEventListener('click', () => {
     showModal('addRoomModal');
 });
 // Event listener for 'Edit' buttons
+// Event listener for 'Edit' buttons
 document.getElementById('roomsTable').addEventListener('click', (e) => {
     if (e.target.classList.contains('edit-btn')) {
         const roomId = e.target.dataset.roomId;
-        // Populate the update form with existing room data (optional)
-        // For now, just show the modal for updating the room
-        showModal('updateRoomModal');
+
+        // Fetch the existing room data from Firestore
+        db.collection("Rooms").doc(roomId).get()
+            .then((doc) => {
+                if (doc.exists) {
+                    const roomData = doc.data();
+
+                    // Populate the update form with existing room data
+                    document.getElementById('updatedTitle').value = roomData.roomTitle;
+                    document.getElementById('updatedRoomNumber').value = roomData.roomNumber;
+                    document.getElementById('updatedRoomSize').value = roomData.roomSize;
+                    document.getElementById('updatedRoomType').value = roomData.room_type;
+
+                    // Show the update modal
+                    showModal('updateRoomModal');
+                } else {
+                    console.log("No such document!");
+                    alert("Room data not found.");
+                }
+            })
+            .catch((error) => {
+                console.error("Error getting room data:", error);
+                alert("Failed to fetch room data. Please check the console for details.");
+            });
     }
 });
+
 
 // Event listener for 'Delete' buttons
 document.getElementById('roomsTable').addEventListener('click', (e) => {

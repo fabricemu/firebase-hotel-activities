@@ -66,22 +66,38 @@
     </div>
 
     <!-- Update Room Modal -->
-    <div class="modal" id="updateRoomModal">
-        <div class="modal-content">
-            <span class="close" onclick="hideModal('updateRoomModal')">&times;</span>
-            <h2>Update Room</h2>
-            <form id="updateRoomForm">
-                <input id="roomIdToUpdate" name="roomIdToUpdate" type="hidden">
-                <label for="updatedTitle">Title:</label>
-                <input id="updatedTitle" name="updatedTitle" type="text">
-                <label for="updatedDescription">Description:</label>
-                <textarea id="updatedDescription" name="updatedDescription"></textarea>
-                <label for="updatedPrice">Price:</label>
-                <input id="updatedPrice" name="updatedPrice" type="number">
-                <button type="submit">Update Room</button>
-            </form>
-        </div>
+<div id="updateRoomModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="hideModal('updateRoomModal')">&times;</span>
+        <h2>Update Room</h2>
+        <form id="updateRoomForm">
+            <label for="updatedTitle">Room Title:</label>
+            <input type="text" id="updatedTitle" name="updatedTitle" required>
+
+            <label for="updatedRoomNumber">Room Number:</label>
+            <input type="text" id="updatedRoomNumber" name="updatedRoomNumber" required>
+
+            <label for="updatedRoomSize">Room Size:</label>
+            <select id="updatedRoomSize" name="updatedRoomSize">
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+            </select>
+
+            <label for="updatedRoomType">Room Type:</label>
+            <select id="updatedRoomType" name="updatedRoomType">
+                <option value="Standard">Standard</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Executive">Executive</option>
+            </select>
+
+            <!-- Add more fields as needed -->
+
+            <button type="submit">Update Room</button>
+        </form>
     </div>
+</div>
+
 </div>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
