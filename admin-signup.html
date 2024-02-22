@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin - login and Register</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<div class="form -container">
+    <h1> create account for administrator</h1>
+    <hr>
+    <form id="registerForm">
+        <label for="firstname">firstname </label><br>
+        <input id="firstname" name="firstname" placeholder="First name.." type="text" value=""><br>
+
+        <label for="secondname">Second name</label><br>
+        <input id="secondname" name="secondname" placeholder="Second name.." type="text" value=""><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input id="phoneNumber" name="phoneNumber" placeholder="123-456-7890" type="tel">
+
+        <label for="Email">Email</label><br>
+        <input id="email" name="email" placeholder="Your Email.." type="email" value=""><br>
+
+        <label for="password">password</label><br>
+        <input id="password" name="password" placeholder="password.." type="password" value=""><br>
+        <a href="admin-login.html">arleady have account</a>
+        <div>
+            <button id="submitBtn" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="js/firebase.js"></script>
+<script src="js/admin-auth.js"></script>
+
+</body>
+</html>
+
+

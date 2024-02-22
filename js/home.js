@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="room-price">${room.roomTitle}</div>
                 <div class="room-title">${room.roomNumber}</div>
                 <div class="room-type">${room.roomSize}</div>
-                
                 <div class="room-price">${room.room_type}</div>
                 <button class="reserve-btn" data-room-id="${doc.id}">Reserve</button>
                 
